@@ -25,6 +25,6 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
 
       - name: Create branch
-        run: git checkout -b release/${{ github.event.inputs.databaseToMigrate }}
+        run: git checkout -b release/${{ github.event.inputs.versionNumber }}
       - name: Push branch
         run: git push
