@@ -27,4 +27,4 @@ jobs:
       - name: Create branch
         run: git checkout -b release/${{ github.event.inputs.versionNumber }}
       - name: Push branch
-        run: git push
+        run: git push --set-upstream origin release/${{ github.event.inputs.versionNumber }}
