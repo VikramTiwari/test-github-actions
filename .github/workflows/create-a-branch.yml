@@ -28,3 +28,8 @@ jobs:
         run: git checkout -b release/${{ github.event.inputs.versionNumber }}
       - name: Push branch
         run: git push --set-upstream origin release/${{ github.event.inputs.versionNumber }}
+      - name: Create github release
+        uses: actions/create-release@v1
+        with:
+          tag_name: v0.0.1
+          release_name: Release 0.0.1
